@@ -1,0 +1,120 @@
+{% extends 'navbar/usernavbar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* CSS styles go here */
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        section {
+            flex: 1 1 45%;
+            margin-bottom: 30px;
+        }
+
+        section h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .book {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .book img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .book h3 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .book p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+{% block body %}
+    <div class="container">
+        <header>
+            <h1>Welcome to Our Library</h1>
+            <p>Explore, discover, and learn!</p>
+        </header>
+
+        <main>
+            <section class="featured-books">
+                <h2>Featured Books</h2>
+                <div class="book">
+                    <img src="" alt="Book 1">
+                    <h3>Book Title 1</h3>
+                    <p>Author: Author Name</p>
+                </div>
+                <!-- Add more featured books here -->
+            </section>
+
+            <section class="new-arrivals">
+                <h2>New Arrivals</h2>
+                <div class="book">
+                    <img src="" alt="Book 2">
+                    <h3>Book Title 2</h3>
+                    <p>Author: Author Name</p>
+                </div>
+                <!-- Add more new arrivals here -->
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Library Website</p>
+        </footer>
+    </div>
+{% endblock %}
+</body>
+</html>

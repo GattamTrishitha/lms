@@ -1,0 +1,90 @@
+{% extends 'navbar/librarynavbar.html' %}
+{% load static %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library Homepage</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+{% block body %}
+
+    <style>
+        /* Additional CSS styles */
+        .hero-section {
+            background-image: url("{% static 'bg2.jpeg' %}");
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero-section h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .featured-books {
+            text-align: center;
+            margin-top: -300px;
+        }
+
+        .book {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .book img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .book h3 {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        .book p {
+            font-size: 18px;
+            margin-top: 5px;
+        }
+    </style>
+<div class="hero-section">
+    <h1>Welcome to our Library</h1>
+    <p>Explore, discover, and learn!</p>
+</div>
+
+<div class="container">
+    <section class="featured-books">
+        <h2>Popular_Books</h2>
+        <div class="book">
+            <img src="{% static 'images/b3.jpeg' %}" alt="Book 1">
+            <h3>Book</h3>
+            <p>Author: Author Name</p>
+        </div>
+        <div class="book">
+            <img src="{% static 'images/b2.jpg' %}" alt="Book 2">
+            <h3>Book Title 2</h3>
+            <p>Author: Author Name</p>
+        </div>
+        <div class="book">
+            <img src="{% static 'images/b1.jpg' %}" alt="Book 1">
+            <h3>Book</h3>
+            <p>Author: Author Name</p>
+        </div>
+        <!-- Add more featured books here -->
+    </section>
+</div>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,36 @@
+{% extends 'navbar/projectnavbar.html'%}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block body %}
+<div class="container mt-5"></div>
+<div class="row">
+    {% for book_details in book_details_list %}
+    <div class="col-md-4 mb-4">
+<div class="card" style="width: 20rem;">
+  <img src="{% static 'images/b3.jpeg'%}" class="card-img-top" alt="">
+
+  <div class="card-body">
+    <h5 class="card-title">BookTitle: {{ book_details.Book_title }}</h5>
+    <p class="card-text">BookPrice:{{ book_details.Book_price }}</p>
+      <p class="card-text">BookType: {{ book_details.Book_type }}</p>
+      <p class="card-text">BookAuthor: {{ book_details.Book_Author }}</p>
+          <p class="card-text">About: {{ book_details.About }}</p>
+
+
+      <a href="#" class="btn btn-primary">Edit</a>
+      <a href="#" class="btn btn-primary">Delete</a>
+       </div>
+      </div>
+    </div>
+    {% endfor %}
+ </div>
+</div>
+
+{% endblock %}
+</body>
+</html>

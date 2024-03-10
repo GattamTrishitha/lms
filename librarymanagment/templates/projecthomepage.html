@@ -1,0 +1,50 @@
+{% extends 'navbar/projectnavbar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Home Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .background-image {
+            background-image: url("{% static 'images/bg2.jpeg' %}");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: georgia, garamond, serif;
+            font-size: 50px;
+            font-style: italic;
+            text-align: center;
+            position: relative;
+        }
+
+        .content {
+            position: absolute;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+{% block body %}
+
+<div class="background-image">
+    <div class="content">
+        <h1 align="center"  >THE HOME OF BOOKS</h1>
+        <!-- Additional content goes here -->
+    </div>
+    <!-- Add the image inside this div -->
+    <img src="{% static 'images/bg2.jpeg' %}" alt="Your Image" style="width: 100%; height: 700px;;">
+</div>
+
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,62 @@
+{% extends 'navbar/projectnavbar.html'%}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block body %}
+
+<h1>
+    This is the books containing in lib in libmodule
+</h1>
+<div>
+    <div class="container mt-5">
+        <h3>
+            Books Details
+        </h3>
+        <form method="post" action="{% url 'librarymodule:add_book_details' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for ='BookTitle'>BookTittle</label>
+                <input type="text" class="form-control" name="BookTitle" id ="BookTitle" placeholder="Enter the BookTitle">
+
+            </div>
+            <div class="form-group">
+                <label for ='BookPrice'>Book Price</label>
+                <input type="text" class="form-control" name="BookPrice" id ="BookPrice" placeholder="Enter the BookPrice">
+
+            </div>
+            <div class="form-group">
+                <label for ='BookType'>BookType</label>
+               <select class ="form-controil" name="BookType" id="BookType">
+                   <option value="Thiller">Thiller</option>
+                   <option value="Rom-Com">Rom-Com</option>
+                   <option value="Mystery">Mystery</option>
+                   <option value="Movitivaltional">Motivational</option>
+               </select>
+            </div>
+
+
+             <div class="form-group">
+                <label for ='BookAuthor'>BookAuthor</label>
+                <input type="text" class="form-control" name="BookAuthor" id ="BookAuthor" placeholder="Enter the BookAuthor">
+
+            </div>
+            <div class="from-group">
+                    <label for="About">About</label>
+                    <textarea class = "form-control" name="About" id ="About" rows="2" placeholder=" ">
+                    </textarea>
+                </div>
+            <div>
+                <button type="Submit" class="btn btn-outline-info">Submit</button>
+
+            </div>
+        </form>
+
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>
